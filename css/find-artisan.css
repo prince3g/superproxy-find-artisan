@@ -1,0 +1,545 @@
+
+/*h-grid*/
+.h-grid{
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.h-grid ul{
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    overflow-x: auto;
+    margin-bottom: 10px;
+}
+.h-grid ul li{
+    margin-left: 20px;
+    white-space: nowrap;
+}
+.h-grid ul li:first-child{
+    margin-left: 0px;
+}
+.h-grid ul li a{
+    font-size: 16px;
+    font-weight: 600;
+    color: #717790;
+    transition: all 0.3s ease-in-out;
+}
+@media screen and (max-width:500px){
+  .h-grid ul li a{
+        font-size: 13px !important;
+        font-weight: 500 !important;
+    }
+}
+.h-grid ul .active-ppt a,
+.h-grid ul li a:hover{
+    color: #ffffff;
+}
+
+/*hero-secMain-form*/
+.hero-secMain-form{
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 20px;
+     background: #1E1F26;
+    border-top:2px solid #0EBEFF;
+}
+.hero-secMain-form p{
+    margin: 0;
+    padding: 0;
+    font-weight: 600;
+    font-size: .75rem;
+    text-transform: uppercase;
+    color: #84899f;
+    padding: 10px 0px;
+    margin-bottom: 20px;
+    display: block;
+    width: 100%;
+    border-bottom: 1px solid #373C48;
+}
+.hero-form{
+    position: relative;
+    width: 80%;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 150px;
+    grid-gap: 20px;
+}
+
+@media screen and (max-width:1350px){
+.hero-form{
+    width: 100% !important;
+}
+}
+@media screen and (max-width:675px){
+  .hero-form{
+    display: block !important;
+  }  
+}
+
+
+.form-input{
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.form-input:frist-child{
+    margin-top: 0px;
+}
+.form-input input{
+    width: 100%;
+    height: 50px;
+    border:none;
+    background-color:#2C303A;
+    border-left: none;
+    padding: 10px;
+    outline: none;
+    color: #ffffff;
+    font-size: 13px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.form-input input::placeholder{
+    color: #AAAEBC;
+}
+.form-input input[type="submit"]{
+    background-color: #444857;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: all 0.3s ease-in-out;
+     font-weight: 600;
+    font-size: .75rem;
+}
+.form-input input[type="submit"]:hover{
+    background: #5E6377;
+}
+.form-input button{
+    width: 50px;
+    height: 50px;
+    outline: none;
+    border:none;
+    background-color: #2C303A;
+    border-right: 1px solid #373C48;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+.form-input button img{
+    max-width: 25px;
+}
+
+/*sec-header*/
+.sec-header{
+    position: relative;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.sec-header h3{
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    padding: 20px 0px;
+    border-top:2px solid #2C303A;
+    margin-top: 5px;
+    display: block;
+    font-size: 20px;
+}
+.sec-header h3 span{
+    margin: 0;
+    padding: 0;
+    font-weight: 600;
+    font-size: .75rem;
+    text-transform: uppercase;
+    color: #84899f;
+    margin-bottom: 5px;
+    display: block;
+}
+
+/*artisan-card-sec*/
+.artisan-card-sec{
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns:repeat(auto-fill, minmax(400px, 1fr));
+    grid-gap: 30px;
+    grid-template-rows:auto;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+@media screen and (max-width:900px){
+    .artisan-card-sec{
+        grid-template-columns:repeat(auto-fill, minmax(300px, 1fr)) !important;
+    }
+}
+@media screen and (max-width:675px){
+    .artisan-card-sec{
+        display: block !important;
+    }
+    .artisan-card{
+        margin-top: 20px !important;
+    }
+}
+.artisan-card{
+    position: relative;
+    width: 100%;
+    height: auto;
+    min-height: 200px;
+    border-radius: 8px;
+    padding: 30px;
+    z-index: 3;
+}
+@media screen and (max-width:675px){
+    .artisan-card{
+        padding: 20px !important;
+    }
+    .artisan-card:before{
+    right: 0px !important;
+    bottom: 0px !important;
+    top: 0px !important;
+    left: 0px !important;
+}
+}
+.artisan-card:before{
+    content: '';
+    position: absolute;
+    z-index: -3;
+    right: 0;
+    bottom: 0px;
+    top: 10px;
+    left: 40px;
+    background: #1E1F26;
+    border-radius: inherit;
+    transition: all 0.3s ease-in-out;
+}
+.artisan-card:hover::before{
+    right: 0px;
+    bottom: 0px;
+    top: 0px;
+    left: 0px;
+}
+/*top-artisan-card*/
+.top-artisan-card{
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns:60px 1fr;
+    grid-gap: 10px;
+}
+.artian-top-profile{
+    position: relative;
+    width: 100%;
+    height: 60px;
+}
+@media screen and (max-width:450px){
+    /*top-artisan-card*/
+.top-artisan-card{
+    grid-template-columns:40px 1fr !important;
+}
+.artian-top-profile{
+    height: 40px !important;
+}
+.artian-top-profile button i{
+    width: 25px !important;
+    height: 25px !important;
+    font-size: 15px !important;
+}
+}
+.artian-top-profile button{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: #ffffff;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+}
+.artian-top-profile button img{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    object-fit: cover;
+}
+.artian-top-profile button i{
+    position: absolute;
+    z-index: 3;
+    background: rgba(0, 0, 0, 0.6);
+    width: 30px;
+    height: 30px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 20px;
+    color: #ffffff;
+}
+.artian-top-profile button span{
+    position: absolute;
+    top: -50px;
+    background:#000000;
+    z-index: 5;
+    white-space: nowrap;
+    height: 30px;
+    padding: 0px 10px;
+    display:none;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 3px;
+    color: #ffffff;
+    font-size: 12px;
+    animation:bounceIn 1s ease-in-out;
+}
+@media screen and (max-width:675px){
+    .artian-top-profile button span{
+        top: -30px !important;
+    }
+}
+.artisan-card:hover .artian-top-profile button span{
+    display: flex;
+}
+.artian-top-profile button span:before{
+    content: '';
+    position: absolute;
+    bottom: -19px;
+    border-top: 10px solid #000000;
+    border-bottom: 10px solid transparent;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+}
+.artian-top-profile button span img{
+    width: auto;
+    height: auto;
+    max-width: 15px;
+    margin-left: 5px;
+}
+.active_animate.animate_alert{
+    display:flex;
+}
+.artisan-top-details{
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: block;
+    overflow: hidden;
+}
+.artisan-top-details h3{
+    position: relative;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 20px;
+}
+.artisan-top-details p{
+    position: relative;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 15px;
+    color: #AAAEBC;
+    margin-top: 10px;
+}
+.artisan-top-details p span{
+    margin-right: 7px;
+}
+.artisan-top-details p span i{
+    font-size: 11px;
+    background: #47CF73;
+    padding:6px;
+    width: 15px;
+    height:15px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #000000;
+    border-radius: 2px;
+    font-weight: 500;
+}
+
+
+/*bottom-artisan-card*/
+.bottom-artisan-card{
+    position: relative;
+    width: 100%;
+    height: auto;
+    background:#2C303A;
+    margin-top: 20px;
+    border-radius: 5px;
+    padding: 10px;
+}
+@media screen and (max-width:675px){
+    .bottom-artisan-card{
+        background: transparent !important;
+        border-top: 2px solid #2C303A;
+        border-radius: 0px !important;
+        padding: 10px 0px !important;
+    }
+}
+.bottom-artisan-card h3{
+    position: relative;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+.bottom-artisan-card h3 span{
+    position: relative;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 16px;
+}
+
+
+.card-btn{
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+}
+.card-btn ul{
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+@media screen and (max-width:290px){
+    .card-btn{
+        margin-top: 10px !important;
+    }
+    .card-btn ul{
+        display: block !important;
+    }
+    .card-btn ul li{
+        width: 100% !important;
+        margin: 0px !important;
+        margin-top: 5px !important;
+    }
+    .card-btn ul li a{
+        width: 100% !important;
+        height: 35px !important;
+    }
+}
+.card-btn ul li{
+    margin-left: 10px;
+    display: inline-block;
+}
+.card-btn ul li:first-child{
+    margin-left: 0px;
+}
+.card-btn ul li a{
+    position: relative;
+    display: inline-flex;
+    width: 100px;
+    background-color: #131417;
+    font-size: 12px;
+    height: 30px;
+    border-radius: 3px;
+    align-items: center;
+    justify-content: center;
+}
+.card-btn ul li a i{
+    margin-right: 5px;
+}
+
+
+
+
+
+
+/*view-picture*/
+.view-picture{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+}
+.show-view-picture.view-picture{
+    display: flex;
+}
+/*view-picture*/
+.view-picture-body{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background:rgba(0, 0, 0, 0.8);
+    z-index: -100;
+    cursor: pointer;
+}
+.view-picture img{
+    position: relative;
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+    animation:zoomIn 0.5s ease-in-out;
+}
+.view-picture button{
+    position: absolute;
+    z-index: 100;
+    left: 30px;
+    top: 30px;
+    width: 30px;
+    height: 30px;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255,0.3);
+    color: #ffffff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border: 1px solid #ffffff;
+}
+.view-picture button i{
+    transition: all 0.3s ease-in-out;
+}
+.view-picture button:hover i{
+    transform: rotate(90deg);
+}
